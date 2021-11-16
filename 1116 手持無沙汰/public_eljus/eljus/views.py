@@ -22,7 +22,7 @@ class ProblemListView(LoginRequiredMixin, generic.ListView):
     paginate_by = 2
 
     def get_queryset(self):
-        eljus = ProblemManage.objects.filter(user=self.request.user).order_by('-created_at')
+        eljus = ProblemManage.objects.filter(username=self.request.user).order_by('-created_at')
         return eljus
 
 class ProblemDetailView(LoginRequiredMixin, generic.DetailView):
