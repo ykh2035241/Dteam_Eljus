@@ -11,10 +11,10 @@
     <div class="my-div-style w-100">
         <div class="row">
             <div class="col-3">
-                <strong>タイトル</strong>
+                <strong>言語</strong>
             </div>
             <div class="col-9">
-                {{ object.title }}
+                {{ object.uselanguage }}
             </div>
         </div>
 
@@ -22,16 +22,16 @@
 
         <div class="row">
             <div class="col-3">
-                <strong>本文</strong>
+                <strong>問題文</strong>
             </div>
             <div class="col-9">
-                {{ object.content|linebreaksbr }}
+                {{ object.problemstate|linebreaksbr }}
             </div>
         </div>
 
         <hr>
 
-        <div class="row">
+        <!-- <div class="row">
             <div class="col-3">
                 <strong>写真</strong>
             </div>
@@ -42,7 +42,7 @@
             </div>
             <div class="col-3">
             </div>
-        </div>
+        </div> -->
 
         <hr>
 
@@ -67,7 +67,7 @@
         </div>
 
         <a class="btn btn-success mt-5 mb-3" href="{% url 'eljus:problem_update' object.pk %}">編集</a>
-        <a class="btn btn-danger mt-5 ml-2 mb-3" href="{% url 'diary:diary_delete' object.pk %}">削除</a>
+        <!-- <a class="btn btn-danger mt-5 ml-2 mb-3" href="{% url 'diary:diary_delete' object.pk %}">削除</a> -->
     </div>
 </div>
 {% endblock %}

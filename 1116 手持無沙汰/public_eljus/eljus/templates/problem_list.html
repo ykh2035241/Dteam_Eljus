@@ -15,16 +15,16 @@
         <div class="my-div-style w-100">
             <div class="col-lg-8 col-md-10 mx-auto">
                 <div class="clearfix">
-                    <a class="btn btn-primary float-right" href="#">新規作成</a>
+                    <a class="btn btn-primary float-right" href="{% url 'eljus:problem_create' %}">新規作成</a>
                 </div>
-                {% for a in object_list %}
+                {% for eljus in object_list %}
                     <div class="post-preview">
-                        <a href="{% url 'eljus:problem_detail' object.pk %}">
+                        <a href="{% url 'eljus:problem_detail' eljus.pk %}">
                           <h2 class="post-title">
-                            {{ a.problemstate }}
+                            {{ eljus.problemstate }}
                           </h2>
                           <h3 class="post-subtitle">
-                            {{ a.difficulty|truncatechars:20 }}
+                            {{ eljus.difficulty }}
                           </h3>
                         </a>
                         <p class="post-meta">{{ a.created_at }}</p>
