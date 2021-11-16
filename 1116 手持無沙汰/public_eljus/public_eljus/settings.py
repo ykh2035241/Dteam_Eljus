@@ -212,5 +212,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 MEDIA_URL = '/media/'
 
 #イルカ分からない
-LOGIN_REDIRECT_URL = 'eljus:problem_list'#1116
+#LOGIN_REDIRECT_URL = 'eljus:problem_list'#1116
 
